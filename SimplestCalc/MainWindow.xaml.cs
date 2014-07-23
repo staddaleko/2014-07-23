@@ -91,5 +91,10 @@ namespace SimplestCalc
         {
             pierwsza.Clear();
         }
+
+        private void zamknij_Checked(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
