@@ -7,11 +7,31 @@
             <ColumnDefinition Width="52*"/>
             <ColumnDefinition Width="51*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="Stjudenci" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Height="271" Width="235"/>
-        <ComboBox x:Name="ComboStjudent" HorizontalAlignment="Left" Margin="8,20,0,0" VerticalAlignment="Top" Width="120" Initialized="ComboBox_Initialized" SelectionChanged="ComboStjudent_SelectionChanged" Grid.Column="1"/>
-        <Label x:Name="testLabel" Content="Numer indeksu w stringu" HorizontalAlignment="Left" Margin="8,47,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="UczenPierwszyEtap" Content="Pierwszy Etap" HorizontalAlignment="Left" Margin="8,73,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <ListBox x:Name="ListBoxTest" HorizontalAlignment="Left" Height="187" Margin="8,104,0,0" VerticalAlignment="Top" Width="228" Grid.Column="1"/>
+        <DataGrid x:Name="Stjudenci" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Height="271" Width="235">
+            <DataGrid.Effect>
+                <DropShadowEffect/>
+            </DataGrid.Effect>
+        </DataGrid>
+        <ComboBox x:Name="ComboStjudent" HorizontalAlignment="Left" Margin="8,20,0,0" VerticalAlignment="Top" Width="120" Initialized="ComboBox_Initialized" SelectionChanged="ComboStjudent_SelectionChanged" Grid.Column="1">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label x:Name="testLabel" Content="Numer indeksu w stringu" HorizontalAlignment="Left" Margin="8,47,0,0" VerticalAlignment="Top" Grid.Column="1" >
+            <Label.Effect>
+                <BlurEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="UczenPierwszyEtap" Content="Pierwszy Etap" HorizontalAlignment="Left" Margin="8,73,0,0" VerticalAlignment="Top" Grid.Column="1" >
+            <Label.Effect>
+                <BlurEffect/>
+            </Label.Effect>
+        </Label>
+        <ListBox x:Name="ListBoxTest" HorizontalAlignment="Left" Height="187" Margin="8,104,0,0" VerticalAlignment="Top" Width="228" Grid.Column="1">
+            <ListBox.Effect>
+                <DropShadowEffect/>
+            </ListBox.Effect>
+        </ListBox>
 
     </Grid>
 </Window>

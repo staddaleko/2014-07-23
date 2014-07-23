@@ -42,15 +42,15 @@ namespace DoSQLa
             DataClasses1DataContext dba = new DataClasses1DataContext();
             var zapytanie = (from s in dba.StudentTabelas select new { s.ID, s.Imię, s.Nazwisko });
            
-            string[] doWywalenia = { "{", ",", "ID =", "Imię =", "Nazwisko =", "}" };
-            string[] splity = Convert.ToString(zapytanie).Split(doWywalenia, StringSplitOptions.RemoveEmptyEntries);
-            ComboStjudent.ItemsSource = zapytanie.ToList();
-            //foreach (var item in splity)
-            //{
-            //    ComboStjudent.Items.Add(item);
-            //}
-
+            //string[] doWywalenia = { "{", ",", "ID =", "Imię =", "Nazwisko =", "}" };
+            //string[] splity = Convert.ToString(zapytanie).Split(doWywalenia, StringSplitOptions.RemoveEmptyEntries);
             //ComboStjudent.ItemsSource = zapytanie.ToList();
+            ////foreach (var item in splity)
+            ////{
+            ////    ComboStjudent.Items.Add(item);
+            ////}
+
+            ComboStjudent.ItemsSource = zapytanie.ToList();
 
         }
 
@@ -75,6 +75,7 @@ namespace DoSQLa
             {
                 ListBoxTest.Items.Add(item);
             }
+            //testLabel.Content.ToString(splity);
             
             
             var zapytanie = (from p in db.Przedmioties
