@@ -3,10 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid Margin="0,0,2,0">
-        <DataGrid x:Name="Stjudenci" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Height="236" Width="235"/>
-        <ComboBox x:Name="ComboStjudent" HorizontalAlignment="Left" Margin="319,20,0,0" VerticalAlignment="Top" Width="120" Initialized="ComboBox_Initialized" SelectionChanged="ComboStjudent_SelectionChanged"/>
-        <Label x:Name="testLabel" Content="Numer indeksu w stringu" HorizontalAlignment="Left" Margin="329,128,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="UczenPierwszyEtap" Content="Pierwszy Etap" HorizontalAlignment="Left" Margin="329,169,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="51*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="Stjudenci" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Height="271" Width="235"/>
+        <ComboBox x:Name="ComboStjudent" HorizontalAlignment="Left" Margin="8,20,0,0" VerticalAlignment="Top" Width="120" Initialized="ComboBox_Initialized" SelectionChanged="ComboStjudent_SelectionChanged" Grid.Column="1"/>
+        <Label x:Name="testLabel" Content="Numer indeksu w stringu" HorizontalAlignment="Left" Margin="8,47,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="UczenPierwszyEtap" Content="Pierwszy Etap" HorizontalAlignment="Left" Margin="8,73,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <ListBox x:Name="ListBoxTest" HorizontalAlignment="Left" Height="187" Margin="8,104,0,0" VerticalAlignment="Top" Width="228" Grid.Column="1"/>
 
     </Grid>
 </Window>

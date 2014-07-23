@@ -41,7 +41,16 @@ namespace DoSQLa
         {
             DataClasses1DataContext dba = new DataClasses1DataContext();
             var zapytanie = (from s in dba.StudentTabelas select new { s.ID, s.Imię, s.Nazwisko });
+           
+            string[] doWywalenia = { "{", ",", "ID =", "Imię =", "Nazwisko =", "}" };
+            string[] splity = Convert.ToString(zapytanie).Split(doWywalenia, StringSplitOptions.RemoveEmptyEntries);
             ComboStjudent.ItemsSource = zapytanie.ToList();
+            //foreach (var item in splity)
+            //{
+            //    ComboStjudent.Items.Add(item);
+            //}
+
+            //ComboStjudent.ItemsSource = zapytanie.ToList();
 
         }
 
@@ -49,7 +58,7 @@ namespace DoSQLa
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
             string uczen = ComboStjudent.SelectedItem.ToString();
-            string uczenPierwszyEtap = uczen.Substring(6, 2);
+            //string uczenPierwszyEtap = uczen.Substring(6, 2);
             //UczenPierwszyEtap.Content = uczenPierwszyEtap;
             string obciecie = uczen.Remove(0, 6);
             //testLabel.Content = obciecie;
@@ -59,6 +68,15 @@ namespace DoSQLa
             //testLabel.Content = firstCharacter;
             string obciecie2 = obciecie.Remove(firstCharacter);
             int id = Convert.ToInt32(obciecie2);
+
+            string[] doWywalenia = { "{", ",", "ID =", "Imię =", "Nazwisko =", "}" };
+            string[] splity = uczen.Split(doWywalenia, StringSplitOptions.RemoveEmptyEntries) ;
+            foreach (var item in splity)
+            {
+                ListBoxTest.Items.Add(item);
+            }
+            
+            
             var zapytanie = (from p in db.Przedmioties
                              join o in db.Stu_Przeds on p.ID_przedmiotu equals o.ID_Przedmiotu
                              join u in db.StudentTabelas on o.ID_Studenta equals u.ID
