@@ -86,6 +86,17 @@ namespace DoSQLa
             Stjudenci.ItemsSource = zapytanie.ToList();
         }
 
+        private void Zamknąć_już__Checked(object sender, RoutedEventArgs e)
+        {
+   //         DialogResult result = new Form1().ShowDialog();
+   //if (result == DialogResult.OK)
+   //     MessageBox.Show("User clicked OK");
+   // else if (result == DialogResult.Cancel)
+   //     MessageBox.Show("User clicked Cancel");
+            MessageBox.Show("Really? :(", "Papapa", MessageBoxButton.OK);
+            Close();
+        }
+
 
     }
 }
